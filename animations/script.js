@@ -1,4 +1,4 @@
-window.addEventListener('resize', onWindowResize, false);
+// window.addEventListener('resize', ()=>{resetAnim();update();}, false);
 
 window.requestAnimationFrame = (function () {
     return window.requestAnimationFrame ||
@@ -35,7 +35,7 @@ time = 0;
 function init() {
     canvas = document.getElementById('c');
 
-    onWindowResize(null);
+    resetAnim();
 
     for (let i = 0, len = Configs.particleNum; i < len; i++) {
         initParticle((particles[i] = new Particle()));
@@ -47,7 +47,7 @@ function init() {
 }
 
 
-function onWindowResize(e) {
+function resetAnim() {
     screenWidth = canvas.width = window.innerWidth;
     screenHeight = canvas.height = window.innerHeight;
 
@@ -59,9 +59,6 @@ function onWindowResize(e) {
     context.lineCap = context.lineJoin = 'round';
 
     time = 0;
-    if (e != null) {
-        update();
-    }
 }
 
 function getNoise(x, y, z) {

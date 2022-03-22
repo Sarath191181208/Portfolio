@@ -4,19 +4,35 @@
   border-top: 2px solid $primaryClr;
   background: black;
   color: white;
-  padding: 30px;
+  // padding: 30px;
   display: grid;
 }
 
 .links-container {
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .links-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 550px) {
+  .links-container {
+    flex-direction: column;
+    align-items: end;
+  }
 }
 
 .info-container {
   display: flex;
   align-items: center;
+  margin: 5px;
 }
 
 .info-container .logo {
@@ -34,4 +50,5 @@
 .footer-txt {
   margin-top: 30px;
   text-align: center;
+  font-size: 11px;
 }
