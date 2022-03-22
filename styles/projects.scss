@@ -5,6 +5,25 @@
   overflow-x: hidden;
 }
 
+#projects > h1 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#projects > h1::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 2px;
+  background: white;
+  margin-top: 10px;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
