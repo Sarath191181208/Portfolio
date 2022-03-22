@@ -316,6 +316,17 @@
         toggleBtnChange();
       });
 
+      // Adding the toggle property to the nav btns
+      let sideBarBtns = document.querySelectorAll(".nav-list li");
+      [...sideBarBtns].map((btn) => {
+        btn.addEventListener("click", () => {
+          if (sidebar.classList.contains("open")) {
+            sidebar.classList.toggle("open");
+            toggleBtnChange();
+          }
+        });
+      });
+
       function toggleBtnChange() {
         // changing the nav bar btn icon
         let closeCls = "bx-message-square-x";
