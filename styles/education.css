@@ -53,7 +53,7 @@ section {
 
 .year,
 .marks {
-  color: #00a3a3;
+  color: #01be76;
 }
 
 .indent {
@@ -68,7 +68,7 @@ section {
 #education ul li::before {
   content: "→";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #00a3a3;
+  color: #01be76;
   /* Change the color */
   font-weight: bolder;
   /* If you want it to be bold */

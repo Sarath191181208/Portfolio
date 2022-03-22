@@ -78,7 +78,7 @@ section {
 }
 
 .dynamic-txts {
-  color: #00a3a3;
+  color: #01be76;
   font-weight: bolder;
   -webkit-animation: roll-text 8s cubic-bezier(0.79, -0.08, 0.56, 1.47) infinite;
           animation: roll-text 8s cubic-bezier(0.79, -0.08, 0.56, 1.47) infinite;

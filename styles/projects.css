@@ -70,7 +70,7 @@ section {
   color: white;
   font-size: 0.8rem;
   font-weight: bolder;
-  background: #00a3a3;
+  background: #01be76;
   border-radius: 5px;
   text-decoration: none;
   position: absolute;
@@ -99,7 +99,7 @@ section {
 .projects-card > a:hover {
   -webkit-transform: translate(0px, -3px);
           transform: translate(0px, -3px);
-  color: #00a3a3;
+  color: #01be76;
   background: white;
 }
 /*# sourceMappingURL=projects.css.map */

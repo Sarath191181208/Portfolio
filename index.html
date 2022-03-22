@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/education.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+      }
+    </style>
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+      integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+      integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-user icon"></i>
+        <div class="my_name">Sarath Vangipuram</div>
+        <i class="bx bx-menu" id="toggle-btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#home">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+        <li>
+          <a href="#about">
+            <i class="bx bx-info-circle"></i>
+            <span class="links_name">About</span>
+          </a>
+          <span class="tooltip">About</span>
+        </li>
+        <li>
+          <a href="#projects">
+            <i class="bx bx-network-chart"></i>
+            <span class="links_name">Projects</span>
+          </a>
+          <span class="tooltip">Projects</span>
+        </li>
+        <li>
+          <a href="#education">
+            <i class="bx bx-award"></i>
+            <span class="links_name">Education</span>
+          </a>
+          <span class="tooltip">Education</span>
+        </li>
+        <li>
+          <a href="#contact">
+            <i class="bx bx-phone-call"></i>
+            <span class="links_name">Contact</span>
+          </a>
+          <span class="tooltip">Contact</span>
+        </li>
+      </ul>
+    </div>
+
+    <section id="home">
+      <div class="bg-img">
+        <iframe
+          src="./animations/index.html"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          class="bg-anim"
+        ></iframe>
+      </div>
+      <div class="home-text">
+        <div class="home-card">
+          <h3 class="hi-text">Hi there 👋. I am,</h3>
+          <h1 class="name">Sarath Vangipuram,</h1>
+          <p>I am from India</p>
+          <div class="wrapper">
+            <div class="static-txt">I'm a</div>
+            <div class="dynamic-txt-container">
+              <ul class="dynamic-txts">
+                <li><span>Student</span></li>
+                <li><span>Developer</span></li>
+                <li><span>Pythoneer !</span></li>
+                <li><span>CG Enthusiast</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h1 id="about-headding">About Me!</h1>
+        <div class="desc-container">
+          <!-- renederd using js -->
+          <p id="intro-desc"></p>
+          <p class="about-desc">
+            A self proclaimed Junior Dev, self taught, and a passionate learner.
+            I have been working with python for the last year .
+          </p>
+          <div class="adept-skills">
+            <h3 class="skills-heading">Adept With</h3>
+            <div class="pill-container">
+              <span class="pill">Python</span>
+              <span class="pill">Pygame</span>
+              <span class="pill">JavaScript(ES6)</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">OOPs</span>
+            </div>
+          </div>
+          <div class="worked-with">
+            <h3 class="skills-heading">Worked With</h3>
+            <div class="pill-container">
+              <span class="pill">React</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Php</span>
+              <span class="pill">Laravel</span>
+              <span class="pill">(Data Bases) </span>
+              <span class="pill">ML & AI</span>
+              <span class="pill">Game Dev</span>
+              <span class="pill">Computer Vision</span>
+              <span class="pill">GDScript</span>
+              <span class="pill">Java</span>
+              <span class="pill">C</span>
+              <span class="pill">C++</span>
+              <span class="pill">etc...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="card-container">
+        <div class="projects-card">
+          <h1 class="title">WireWorld</h1>
+          <p class="desc">
+            Wireworld is a cellular automaton first proposed by Brian Silverman
+            in 1987, as part of his program Phantom Fish Tank. It subsequently
+            became more widely known as a result of an article in the "Computer
+            Recreations" column of Scientific American. Wireworld is
+            particularly suited to simulating transistors, and Wireworld is
+            Turing-complete i.e It can simulate a turning machine.
+          </p>
+          <a href="https://github.com/Sarath191181208/WireWorld"
+            >Open in Github
+          </a>
+        </div>
+        <div class="projects-card">
+          <h1 class="title">Rock Paper Scissors with Hand tracking</h1>
+          <p class="desc">
+            Didn't you play Rock Paper Scissors when you were a kid! This takes
+            me back. It is the classical game of Rock, Paper, Scissors but with
+            a twist it's played with Computer using hand tracking. It is made
+            using Mediapipe.
+          </p>
+          <a
+            href="https://github.com/Sarath191181208/RockPaperScissorsWithHandTracking"
+            >Open in Github
+          </a>
+        </div>
+        <div class="projects-card">
+          <h1 class="title">Fourier Transform</h1>
+          <p class="desc">
+            Fourier transform a function that converts the function of time to
+            function of frequency. This project uses Fourier transform to darw
+            the svg's using the epicycles. \({X_k = \sum x_n \cdot e^{-i 2 \pi k
+            n / N}}\)
+          </p>
+          <a href="https://github.com/Sarath191181208/FourierTransformVid"
+            >Open in Github
+          </a>
+        </div>
+        <div class="projects-card">
+          <h1 class="title">A* Visualizer</h1>
+          <p class="desc">
+            Google maps the most used maps right now! uses path finding
+            algorithms to find the shortest path between two locations such one
+            algorithm is A*. This simple application in python using pygame
+            inspired from tech with tim (a youtuber) visualses A* algorithm.
+          </p>
+          <a href="https://github.com/Sarath191181208/A-AlgorithmVisualiser"
+            >Open in Github
+          </a>
+        </div>
+        <div class="projects-card">
+          <h1 class="title">Conways Game Of Life</h1>
+          <p class="desc">
+            A game with simple rules founded by Jhon Horton Conway. Altough a
+            simple game it is discussed that has a possibilty to solve every
+            existing problem.
+          </p>
+          <a href="https://github.com/Sarath191181208/ConwaysGameOfLife"
+            >Open in Github
+          </a>
+        </div>
+        <div class="projects-card">
+          <h1 class="title">Tic Tac Toe</h1>
+          <p class="desc">
+            A tic tac toe game against a computer which searches for moves using
+            backtracking. Practically speaking you can never beat this AI! What
+            ? Yeah that's true all the tic-tac-toe games have been played and
+            all of them end in draw! if neither side makes a mistake. Regardless
+            it's a fun game to play.
+          </p>
+          <a href="https://github.com/Sarath191181208/ConwaysGameOfLife"
+            >Open in Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h1>Education</h1>
+      <ul>
+        <li>
+          SSC(class 10) Bhashyam High School
+          <br />
+          <div class="indent">
+            <p class="address">
+              6th Ln, Pandaripuram, Ashok Nagar, Guntur, Andhra Pradesh 522002
+            </p>
+            Year of passing out( <span class="year">2019</span> )
+            <br />
+            <span class="marks">9.8 GPA</span>
+          </div>
+        </li>
+        <li>
+          Inter(+1, +2) Bhashyam Junior Collage
+          <br />
+          <div class="indent">
+            <p class="address">
+              Chandramouli Nagar, Guntur, Andhra Pradesh 522007
+            </p>
+            Year of passing out(<span class="year">2021</span>)
+            <br />
+            <span class="marks">94.5%</span>
+          </div>
+        </li>
+
+        <li>
+          B.tech VIT-AP Pvt Univ (CSE)
+          <br />
+          <div class="indent">
+            <p class="address">
+              VIT-AP University, G-30, Inavolu, Beside AP Secretariat Amaravati,
+              Andhra Pradesh 522237
+            </p>
+            Expected Year of passing out(<span class="year">2025</span>)
+            <br />
+            <span class="marks"> - </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <footer id="contact">
+      <div class="links-container">
+        <a href="https://github.com/Sarath191181208" class="info-container">
+          <box-icon class="logo" type="logo" name="github"></box-icon>
+          <div class="text">Sarath191181208</div>
+        </a>
+        <div class="info-container">
+          <box-icon class="logo" type="solid" name="phone-call"></box-icon>
+          <div class="text">+91 8247092248</div>
+        </div>
+        <a href="mailto:vssarathc04@gmail.com" class="info-container">
+          <box-icon class="logo" type="logo" name="gmail"></box-icon>
+          <div>vssarathc04@gmail.com</div>
+        </a>
+      </div>
+      <div class="footer-txt">
+        Developed By Vangipuram Srinivasa Sarath Chandra
+      </div>
+    </footer>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#toggle-btn");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        toggleBtnChange();
+      });
+
+      function toggleBtnChange() {
+        // changing the nav bar btn icon
+        let closeCls = "bx-message-square-x";
+        let openCls = "bx-menu";
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace(openCls, closeCls);
+        } else {
+          closeBtn.classList.replace(closeCls, openCls);
+        }
+      }
+    </script>
+
+    <script>
+      const intro = document.getElementById("intro-desc");
+      let year = "";
+      const curr_date = new Date();
+      const start_date = new Date(2021, 4, 1);
+
+      const start_month = start_date.getMonth() + 1;
+      const start_year = start_date.getFullYear() % 100;
+
+      const curr_year = curr_date.getFullYear() % 100;
+      const curr_month = curr_date.getMonth() + 1;
+
+      const diff_year = curr_year - start_year;
+      const diff_month = curr_month - start_month;
+
+      const std_year = diff_year * 12 + diff_month;
+
+      if (std_year < 12) {
+        year = "Freshman";
+      } else if (std_year < 24) {
+        year = "Sophomore";
+      } else if (std_year < 36) {
+        year = "Junior";
+      } else {
+        year = "Senior";
+      }
+
+      intro.innerHTML = `I am ${year} studying in \
+        VIT-AP, Amaravati pursuing B.Tech in Computer Science.`;
+    </script>
+  </body>
+</html>

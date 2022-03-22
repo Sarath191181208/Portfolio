@@ -24,6 +24,7 @@ section {
 }
 
 #contact {
+  border-top: 2px solid #01be76;
   background: black;
   color: white;
   padding: 30px;
