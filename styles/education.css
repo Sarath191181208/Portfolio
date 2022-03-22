@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  background: #e4e9f7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.sidebar.open ~ section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+#education {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #000;
+  color: white;
+  padding: 30px;
+}
+
+#education > h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+#education > h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background: white;
+}
+
+.address {
+  color: grey;
+}
+
+.year,
+.marks {
+  color: #00a3a3;
+}
+
+.indent {
+  margin-left: 30px;
+}
+
+#education ul {
+  list-style: none;
+  /* Remove default bullets */
+}
+
+#education ul li::before {
+  content: "→";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00a3a3;
+  /* Change the color */
+  font-weight: bolder;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+/*# sourceMappingURL=education.css.map */

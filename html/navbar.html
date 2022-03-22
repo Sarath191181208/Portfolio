@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-user icon"></i>
+        <div class="my_name">Sarath Vangipuram</div>
+        <i class="bx bx-menu" id="toggle-btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#home">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+        <li>
+          <a href="#about">
+            <i class="bx bx-info-circle"></i>
+            <span class="links_name">About</span>
+          </a>
+          <span class="tooltip">About</span>
+        </li>
+        <li>
+          <a href="#education">
+            <i class="bx bx-award"></i>
+            <span class="links_name">Education</span>
+          </a>
+          <span class="tooltip">Education</span>
+        </li>
+        <li>
+          <a href="#projects">
+            <i class="bx bx-network-chart"></i>
+            <span class="links_name">Projects</span>
+          </a>
+          <span class="tooltip">Projects</span>
+        </li>
+        <li>
+          <a href="#contact">
+            <i class="bx bx-phone-call"></i>
+            <span class="links_name">Contact</span>
+          </a>
+          <span class="tooltip">Contact</span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#toggle-btn");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        toggleBtnChange();
+      });
+
+      function toggleBtnChange() {
+        // changing the nav bar btn icon
+        let closeCls = "bx-message-square-x";
+        let openCls = "bx-menu";
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace(openCls, closeCls);
+        } else {
+          closeBtn.classList.replace(closeCls, openCls);
+        }
+      }
+    </script>
+  </body>
+</html>

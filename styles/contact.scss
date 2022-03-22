@@ -1,0 +1,36 @@
+@import "./const";
+
+#contact {
+  background: black;
+  color: white;
+  padding: 30px;
+  display: grid;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-container .logo {
+  margin-right: 4px;
+  font-weight: bolder;
+  background: white;
+  border-radius: 5px;
+}
+
+.links-container > a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-txt {
+  margin-top: 30px;
+  text-align: center;
+}

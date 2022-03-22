@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  background: #e4e9f7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.sidebar.open ~ section {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+#projects {
+  background: #3c3c3c;
+  overflow-x: hidden;
+}
+
+.card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  cursor: default;
+}
+
+.projects-card {
+  -webkit-box-shadow: black 0px 25px 20px -20px;
+          box-shadow: black 0px 25px 20px -20px;
+  color: white;
+  position: relative;
+  background: black;
+  border-radius: 10px;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects-card:hover {
+  -webkit-box-shadow: white 0px 25px 20px -20px;
+          box-shadow: white 0px 25px 20px -20px;
+}
+
+.projects-card > p {
+  color: #8b8b8b;
+  font-size: 0.8rem;
+  margin-bottom: 40px;
+}
+
+.projects-card > a {
+  max-height: 30px;
+  padding: 20px;
+  margin: 5px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  background: #00a3a3;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects-card > a {
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects-card > a:hover {
+  -webkit-box-shadow: rgba(0, 163, 163, 0.4) 0px 2px, rgba(0, 163, 163, 0.3) 0px 4px, rgba(0, 163, 163, 0.2) 0px 6px, rgba(0, 163, 163, 0.1) 0px 8px, rgba(0, 163, 163, 0.05) 0px 10px;
+          box-shadow: rgba(0, 163, 163, 0.4) 0px 2px, rgba(0, 163, 163, 0.3) 0px 4px, rgba(0, 163, 163, 0.2) 0px 6px, rgba(0, 163, 163, 0.1) 0px 8px, rgba(0, 163, 163, 0.05) 0px 10px;
+  -webkit-transform: translate(0px, -10px) scale(1.2, 1.2);
+          transform: translate(0px, -10px) scale(1.2, 1.2);
+}
+
+.projects-card > a:hover {
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
+  color: #00a3a3;
+  background: white;
+}
+/*# sourceMappingURL=projects.css.map */

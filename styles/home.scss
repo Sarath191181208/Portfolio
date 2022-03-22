@@ -1,0 +1,88 @@
+@import "./const";
+
+$typerFontSize: 27px;
+$noTypingEle: 4;
+$typerClr: $primaryClr;
+
+#home {
+  color: white;
+}
+.home-text {
+  display: grid;
+  place-content: center;
+  // justify-content: left;
+  padding: 0px 20px;
+  height: 100vh;
+  width: 100%;
+}
+
+.home-card {
+  padding: 30px 20px;
+  border-radius: 12px;
+  @include card();
+}
+
+.bg-img {
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background: red;
+  z-index: -1;
+}
+
+.wrapper {
+  display: flex;
+}
+.wrapper .static-txt {
+  font-weight: 400;
+}
+.wrapper {
+  overflow: hidden;
+  // height: 32px;
+}
+
+.dynamic-txt-container {
+  height: $typerFontSize;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.dynamic-txts {
+  color: $primaryClr;
+  font-weight: bolder;
+  animation: roll-text 8s cubic-bezier(0.79, -0.08, 0.56, 1.47) infinite;
+}
+
+@keyframes roll-text {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}

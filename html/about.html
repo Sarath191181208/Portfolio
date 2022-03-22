@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="../styles/about.css" />
+<section id="about">
+  <div class="container">
+    <h1 id="about-headding">About Me!</h1>
+    <div class="desc-container">
+      <!-- renederd using js -->
+      <p id="intro-desc"></p>
+      <p class="about-desc">
+        A self proclaimed Junior Dev, self taught, and a passionate learner. I
+        have been working with python for the last year .
+      </p>
+      <div class="adept-skills">
+        <h3 class="skills-heading">Adept With</h3>
+        <div class="pill-container">
+          <span class="pill">Python</span>
+          <span class="pill">Pygame</span>
+          <span class="pill">JavaScript(ES6)</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">OOPs</span>
+        </div>
+      </div>
+      <div class="worked-with">
+        <h3 class="skills-heading">Worked With</h3>
+        <div class="pill-container">
+          <span class="pill">React</span>
+          <span class="pill">Flask</span>
+          <span class="pill">Php</span>
+          <span class="pill">Laravel</span>
+          <span class="pill">(Data Bases) </span>
+          <span class="pill">ML & AI</span>
+          <span class="pill">Game Dev</span>
+          <span class="pill">Computer Vision</span>
+          <span class="pill">GDScript</span>
+          <span class="pill">Java</span>
+          <span class="pill">C</span>
+          <span class="pill">C++</span>
+          <span class="pill">etc...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const intro = document.getElementById("intro-desc");
+    let year = "";
+    const curr_date = new Date();
+    const start_date = new Date(2021, 4, 1);
+
+    const start_month = start_date.getMonth() + 1;
+    const start_year = start_date.getFullYear() % 100;
+
+    const curr_year = curr_date.getFullYear() % 100;
+    const curr_month = curr_date.getMonth() + 1;
+
+    const diff_year = curr_year - start_year;
+    const diff_month = curr_month - start_month;
+
+    const std_year = diff_year * 12 + diff_month;
+
+    if (std_year < 12) {
+      year = "Freshman";
+    } else if (std_year < 24) {
+      year = "Sophomore";
+    } else if (std_year < 36) {
+      year = "Junior";
+    } else {
+      year = "Senior";
+    }
+
+    intro.innerHTML = `I am ${year} studying in \
+      VIT-AP, Amaravati pursuing B.Tech in Computer Science.`;
+  </script>
+</section>
