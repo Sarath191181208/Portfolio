@@ -8,6 +8,18 @@
   padding: 30px;
 }
 
+#education > h1,
+#education ul li {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
 #education > h1 {
   font-size: 2rem;
   font-weight: bolder;

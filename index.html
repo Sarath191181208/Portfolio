@@ -415,5 +415,30 @@
         // bg.style.transform = `translateY(${dis * 0.5}px)`;
       });
     </script>
+
+    <script>
+      // .projects-card
+      // add intersecion observer
+      let proj = document.querySelectorAll("#education ul li, #education h1");
+      let opt = {
+        root: null,
+        rootMargin: "-30px",
+        threshold: 0.3,
+      };
+
+      let obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      }, opt);
+
+      proj.forEach((project) => {
+        obs.observe(project);
+      });
+    </script>
   </body>
 </html>
