@@ -41,7 +41,7 @@ section {
 }
 
 #projects {
-  background: #3c3c3c;
+  background: black;
   overflow-x: hidden;
 }
 
@@ -76,8 +76,7 @@ section {
 }
 
 .projects-card {
-  -webkit-box-shadow: black 0px 25px 20px -20px;
-          box-shadow: black 0px 25px 20px -20px;
+  border: 2px solid #262626;
   color: white;
   position: relative;
   background: black;

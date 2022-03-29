@@ -1,7 +1,7 @@
 @import "./const";
 
 #projects {
-  background: rgb(60, 60, 60);
+  background: black;
   overflow-x: hidden;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .projects-card {
-  box-shadow: rgba(0, 0, 0, 1) 0px 25px 20px -20px;
+  border: 2px solid rgb(38, 38, 38);
   color: white;
   position: relative;
   background: rgb(0, 0, 0);
