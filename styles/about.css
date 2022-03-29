@@ -48,6 +48,16 @@ section {
 #about-headding {
   text-align: center;
   margin-bottom: 20px;
+  color: white;
+}
+
+#about-headding::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px;
+  background: #01be76;
+  margin: 0 auto;
 }
 
 .desc-container {
