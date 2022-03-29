@@ -90,7 +90,7 @@
       </ul>
     </div>
 
-    <section id="home">
+    <section id="home" class="parallax-container">
       <div class="bg-anim">
         <iframe
           src="./animations/home/index.html"
@@ -402,6 +402,17 @@
 
       projects.forEach((project) => {
         observer.observe(project);
+      });
+    </script>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const dis = window.scrollY;
+        let homeTxt = document.querySelector(".home-text");
+        homeTxt.style.transform = `translateY(${dis * 1}px)`;
+
+        // let bg = document.querySelector(".bg-anim");
+        // bg.style.transform = `translateY(${dis * 0.5}px)`;
       });
     </script>
   </body>

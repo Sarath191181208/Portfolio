@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.parallax-container {
+  overflow: hidden;
+}
+
 section {
   position: relative;
   background: #e4e9f7;
@@ -32,6 +36,8 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
 }
 
 #contact {
