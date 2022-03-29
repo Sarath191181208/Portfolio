@@ -45,7 +45,7 @@ section {
           backdrop-filter: blur(5px);
 }
 
-.bg-img {
+.bg-anim {
   height: 100vh;
   width: 100%;
   position: absolute;
