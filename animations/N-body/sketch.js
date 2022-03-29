@@ -3,6 +3,8 @@ const NUMMOVERS = 6;
 let movers = [];
 let sun;
 
+let t = 0;
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     canvasSettings();
@@ -29,12 +31,12 @@ const canvasSettings = () => {
     rectMode(CENTER);
 }
 
-function drawGradAt(x, y, endx, endy) {
+function drawGradAt(x, y, endx, endy, t) {
     let grad = drawingContext.createLinearGradient(
         x, y, endx, endy
     );
-    grad.addColorStop(0, color(170, 100, 100, 100));
-    grad.addColorStop(0.3, color(206, 100, 100, 100));
+    grad.addColorStop(0, color(t % 360, 100, 100, 100));
+    grad.addColorStop(0.3, color((t + 60) % 360, 70, 70, 100));
 
     drawingContext.strokeStyle = grad;
 }
@@ -50,7 +52,7 @@ function draw() {
                 mover.attract(other);
             }
             drawGradAt(mover.pos.x, mover.pos.y,
-                other.pos.x, other.pos.y);
+                other.pos.x, other.pos.y, t);
             line(mover.pos.x, mover.pos.y,
                 other.pos.x, other.pos.y);
 
@@ -63,4 +65,7 @@ function draw() {
         // mover.show();
     }
     pop();
+
+    t += 1;
+    t = t % 360;
 }
