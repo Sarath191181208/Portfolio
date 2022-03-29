@@ -29,6 +29,7 @@ const canvasSettings = () => {
     colorMode(HSB);
     pixelDensity(1);
     rectMode(CENTER);
+    strokeWeight(8);
 }
 
 function drawGradAt(x, y, endx, endy, t) {
