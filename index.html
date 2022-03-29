@@ -379,5 +379,36 @@
       intro.innerHTML = `I am ${year} studying in \
         VIT-AP, Amaravati pursuing B.Tech in Computer Science.`;
     </script>
+
+    <script>
+      // .projects-card
+      // add intersecion observer
+      let projects = document.querySelectorAll(".projects-card");
+      let options = {
+        root: null,
+        rootMargin: "-30px",
+        threshold: 0.8,
+      };
+
+      let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          // if (entry.intersectionRatio > 0) {
+          //   entry.target.classList.add("bright-shadow");
+          // } else {
+          //   entry.target.classList.remove("bright-shadow");
+          // }
+          // // remove the class if
+          if (entry.isIntersecting && entry.intersectionRatio > 0) {
+            entry.target.classList.add("bright-shadow");
+          } else {
+            entry.target.classList.remove("bright-shadow");
+          }
+        });
+      }, options);
+
+      projects.forEach((project) => {
+        observer.observe(project);
+      });
+    </script>
   </body>
 </html>

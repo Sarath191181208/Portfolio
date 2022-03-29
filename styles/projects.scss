@@ -44,7 +44,11 @@
   display: grid;
   transition: 0.5s;
 }
-
+// class for animation
+.bright-shadow {
+  transition: 1s;
+  box-shadow: rgb(255, 255, 255) 0px 25px 20px -20px;
+}
 .projects-card:hover {
   box-shadow: rgb(255, 255, 255) 0px 25px 20px -20px;
 }

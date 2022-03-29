@@ -84,6 +84,13 @@ section {
   transition: 0.5s;
 }
 
+.bright-shadow {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: white 0px 25px 20px -20px;
+          box-shadow: white 0px 25px 20px -20px;
+}
+
 .projects-card:hover {
   -webkit-box-shadow: white 0px 25px 20px -20px;
           box-shadow: white 0px 25px 20px -20px;
