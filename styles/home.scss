@@ -7,6 +7,7 @@ $typerClr: $primaryClr;
 #home {
   color: white;
 }
+
 .home-text {
   display: grid;
   place-content: center;
@@ -14,6 +15,7 @@ $typerClr: $primaryClr;
   padding: 0px 20px;
   height: 100vh;
   width: 100%;
+  transition: 0.1s;
 }
 
 .home-card {

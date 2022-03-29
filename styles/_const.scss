@@ -33,6 +33,9 @@ $navIconHover: $primaryClr;
   font-family: "Poppins", sans-serif;
 }
 
+.parallax-container {
+  overflow: hidden;
+}
 section {
   position: relative;
   background: #e4e9f7;
@@ -57,4 +60,5 @@ section {
   left: 0;
   // background: red;
   z-index: -1;
+  transition: 0.1s ease;
 }
