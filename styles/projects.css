@@ -76,7 +76,6 @@ section {
 }
 
 .projects-card {
-  min-width: 150px;
   -webkit-box-shadow: black 0px 25px 20px -20px;
           box-shadow: black 0px 25px 20px -20px;
   color: white;
