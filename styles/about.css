@@ -24,6 +24,16 @@ section {
   width: calc(100% - 250px);
 }
 
+.bg-anim {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #about .container {
   padding: 20px;
   display: -ms-grid;
@@ -31,7 +41,6 @@ section {
   place-content: center;
   width: 100%;
   min-height: 100vh;
-  background: black;
   color: white;
 }
 

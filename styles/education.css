@@ -25,6 +25,16 @@ section {
   width: calc(100% - 250px);
 }
 
+.bg-anim {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #education {
   display: -ms-grid;
   display: grid;

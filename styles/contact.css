@@ -24,6 +24,16 @@ section {
   width: calc(100% - 250px);
 }
 
+.bg-anim {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #contact {
   border-top: 2px solid #01be76;
   background: black;
