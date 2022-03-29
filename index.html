@@ -392,12 +392,6 @@
 
       let observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          // if (entry.intersectionRatio > 0) {
-          //   entry.target.classList.add("bright-shadow");
-          // } else {
-          //   entry.target.classList.remove("bright-shadow");
-          // }
-          // // remove the class if
           if (entry.isIntersecting && entry.intersectionRatio > 0) {
             entry.target.classList.add("bright-shadow");
           } else {
