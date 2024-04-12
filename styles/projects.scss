@@ -1,5 +1,11 @@
 @import "./const";
 
+:root {
+  --proj-card-bg: rgb(10, 10, 10);
+  --proj-card-border: 1px;
+
+}
+
 #projects {
   background: black;
 }
@@ -23,6 +29,10 @@
   transform: translateX(-50%);
 }
 
+#projects-card-continer > .projects-card > .card-border{
+  opacity: 1;
+}
+
 .card-container {
   // display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -36,13 +46,11 @@
 
 .projects-card {
   // border: 2px solid rgb(38, 38, 38);
-  border: 1px solid black;
   color: white;
   width: 240px;
   position: relative;
   background: rgb(255, 255, 255, 0.02);
   border-radius: 10px;
-  padding: 15px;
   display: grid;
   transition: 0.5s;
 }
@@ -51,10 +59,10 @@
   opacity: 1;
 }
 
-.projects-card::before{
+.projects-card::before, .projects-card > .card-border{
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(1, 130, 118, 0.3),
+    rgba(180, 180, 180, 0.2),
     transparent 40%,
   );
   opacity: 0;
@@ -67,16 +75,17 @@
   left: 0;
   top: 0;
   position: absolute;
-  z-index: 10;
+  pointer-events: none;
+  z-index: 5;
 }
 
-.projects-card > p {
+.projects-card  p {
   color: rgb(139, 139, 139);
   font-size: 0.8rem;
   margin-bottom: 40px;
 }
 
-.projects-card > a {
+.projects-card a {
   max-height: 30px;
 
   padding: 20px;
@@ -97,9 +106,30 @@
 
   display: grid;
   place-content: center;
+  pointer-events: click;
   transition: 0.5s;
 }
 
-.projects-card > a:hover {
+.projects-card a:hover {
   color: $primaryClr;
+}
+
+.projects-card > .card-content{
+  background-color: var(--proj-card-bg);
+  height: calc(100% - --proj-card-border*2);
+  width: calc(100% - --proj-card-border*2);
+  border-radius: inherit;
+  margin: var(--proj-card-border);
+  position: relative;
+  z-index: 4;
+  padding: 1rem;
+}
+
+.projects-card > .card-border{
+  background: radial-gradient(
+    200px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 255, 255, 0.4),
+    transparent 40%,
+  );
+  z-index: 3;
 }

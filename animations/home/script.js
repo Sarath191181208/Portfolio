@@ -86,6 +86,9 @@ function initParticle(p) {
 }
 
 function update() {
+    context.fillStyle = 'rgba(0, 0, 0, 0.005)'; // Change the color and alpha as needed
+    context.fillRect(0, 0, screenWidth, screenHeight);
+    // context.clearRect(0, 0, screenWidth, screenHeight); // Clear the canvas    let step = Configs.step,
     let step = Configs.step,
         base = Configs.base,
         i, p, angle;
@@ -101,8 +104,7 @@ function update() {
         p.y += Math.sin(angle) * step;
 
         if (p.color.a < 1) p.color.a += 0.003;
-
-        context.beginPath();
+context.beginPath();
         context.strokeStyle = p.color.toString();
         context.moveTo(p.pastX, p.pastY);
         context.lineTo(p.x, p.y);
@@ -115,8 +117,8 @@ function update() {
     hueBase += 0.1;
     zoff += Configs.zInc;
     time += 1;
-    if (time >= 500) {
-        return
+    if (time >= 200) {
+      return;
     }
 
     requestAnimationFrame(update);

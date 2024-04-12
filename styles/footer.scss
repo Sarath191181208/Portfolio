@@ -1,0 +1,34 @@
+#contact {
+  color: #fff;
+  padding: 20px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.footer-txt {
+  text-align: center;
+  margin-top: 20px;
+}
