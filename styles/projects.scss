@@ -2,7 +2,6 @@
 
 #projects {
   background: black;
-  overflow-x: hidden;
 }
 
 #projects > h1 {
@@ -25,27 +24,50 @@
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
   padding: 20px;
   cursor: default;
 }
 
 .projects-card {
-  border: 2px solid rgb(38, 38, 38);
+  // border: 2px solid rgb(38, 38, 38);
+  border: 1px solid black;
   color: white;
+  width: 240px;
   position: relative;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255, 0.02);
   border-radius: 10px;
   padding: 15px;
   display: grid;
   transition: 0.5s;
 }
-// class for animation
-.bright-shadow {
-  transition: 1s;
-  box-shadow: rgb(255, 255, 255) 0px 25px 20px -20px;
+
+.projects-card:hover::before{
+  opacity: 1;
+}
+
+.projects-card::before{
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(1, 130, 118, 0.3),
+    transparent 40%,
+  );
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  border-radius: inherit;
+  content: ""; 
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 10;
 }
 
 .projects-card > p {
@@ -63,14 +85,14 @@
   color: white;
   font-size: 0.8rem;
   font-weight: bolder;
-  background: $primaryClr;
+  // background: $primaryClr;
 
   border-radius: 5px;
   text-decoration: none;
 
   position: absolute;
   bottom: 5px;
-  left: 10px;
+  // left: 10px;
   //   width: 100%;
 
   display: grid;
@@ -78,12 +100,6 @@
   transition: 0.5s;
 }
 
-.projects-card > a {
-  @include hoverEffect();
-}
-
 .projects-card > a:hover {
-  transform: translate(0px, -3px);
   color: $primaryClr;
-  background: white;
 }

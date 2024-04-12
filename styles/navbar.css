@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -16,10 +15,10 @@ section {
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
+  padding: 20px;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  -webkit-transition: all 0.5s ease;
+  left: 25px;
+  width: calc(100% - 26px);
   transition: all 0.5s ease;
   z-index: 2;
   overflow-x: hidden;
@@ -38,7 +37,6 @@ section {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-transition: 0.1s ease;
   transition: 0.1s ease;
 }
 
@@ -49,19 +47,18 @@ section {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px black;
-          box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 0 5px rgb(0, 0, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #01be76;
+  background: rgb(1, 130, 118);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #00a3a3;
+  background: rgb(0, 163, 163);
 }
 
 .sidebar {
@@ -69,11 +66,10 @@ section {
   left: 0;
   top: 0;
   height: 100%;
-  width: 78px;
-  background: #1d1b31;
+  width: 52px;
+  background: rgb(9, 7, 19);
   padding: 6px 14px;
   z-index: 99;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -83,18 +79,13 @@ section {
 
 .sidebar .logo-details {
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
 }
 
 .sidebar .logo-details .icon {
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -103,7 +94,6 @@ section {
   font-size: 18px;
   font-weight: 600;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -116,15 +106,12 @@ section {
   position: absolute;
   top: 50%;
   right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 22px;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 23px;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -135,7 +122,7 @@ section {
 .sidebar i {
   color: #fff;
   height: 60px;
-  min-width: 50px;
+  min-width: 20px;
   font-size: 28px;
   text-align: center;
   line-height: 60px;
@@ -158,8 +145,7 @@ section {
   left: calc(100% + 15px);
   z-index: 3;
   background: #fff;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 15px;
@@ -167,18 +153,15 @@ section {
   opacity: 0;
   white-space: nowrap;
   pointer-events: none;
-  -webkit-transition: 0s;
   transition: 0s;
 }
 
 .sidebar li:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .sidebar.open li .tooltip {
@@ -186,32 +169,21 @@ section {
 }
 
 .sidebar li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   width: 100%;
   border-radius: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.sidebar:not(.open) li a {
   border-radius: 5px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
-.sidebar li a:hover {
-  -webkit-box-shadow: rgba(0, 163, 163, 0.4) 0px 2px, rgba(0, 163, 163, 0.3) 0px 4px, rgba(0, 163, 163, 0.2) 0px 6px, rgba(0, 163, 163, 0.1) 0px 8px, rgba(0, 163, 163, 0.05) 0px 10px;
-          box-shadow: rgba(0, 163, 163, 0.4) 0px 2px, rgba(0, 163, 163, 0.3) 0px 4px, rgba(0, 163, 163, 0.2) 0px 6px, rgba(0, 163, 163, 0.1) 0px 8px, rgba(0, 163, 163, 0.05) 0px 10px;
-  -webkit-transform: translate(0px, -10px) scale(1.2, 1.2);
-          transform: translate(0px, -10px) scale(1.2, 1.2);
-}
-
-.sidebar li a:hover {
-  background: #01be76;
+.sidebar:not(.open) li a:hover {
+  transform: translate(0px, -10px) scale(1.2, 1.2);
 }
 
 .sidebar li a .links_name {
@@ -221,7 +193,6 @@ section {
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -242,4 +213,5 @@ section {
     display: none;
   }
 }
+
 /*# sourceMappingURL=navbar.css.map */
